@@ -44,22 +44,14 @@ router bgp 101
       redistribute learned
    !
    address-family evpn
-      no neighbor 10.1.11.1 activate
-      no neighbor 10.2.11.1 activate
-      no neighbor 101.1.1.1 activate
-      no neighbor 101.2.2.2 activate
       neighbor 101.13.13.13 activate
-      no neighbor 101.22.22.22 activate
-      no neighbor 101.33.33.33 activate
    !
    address-family ipv4
       neighbor 10.1.11.1 activate
       neighbor 10.2.11.1 activate
-      no neighbor 101.1.1.1 activate
-      no neighbor 101.2.2.2 activate
       no neighbor 101.13.13.13 activate
 ```
-- конфигурация vxlan evpn Leaf1:
+- конфигурация vxlan evpn Leaf3:
 ```
 interface Vxlan1
    vxlan source-interface Loopback1

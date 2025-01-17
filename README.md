@@ -9,6 +9,7 @@ underlay - iBGP
 ### Настроите BGP peering между Leaf и Spine в AF l2vpn evpn
  - конфигурация vxlan evpn Leaf1:
 ```
+service routing protocols model multi-agent
 interface Vxlan1
    vxlan source-interface Loopback1
    vxlan udp-port 4789
@@ -53,6 +54,7 @@ router bgp 101
 ```
 - конфигурация vxlan evpn Leaf3:
 ```
+service routing protocols model multi-agent
 interface Vxlan1
    vxlan source-interface Loopback1
    vxlan udp-port 4789
